@@ -12,8 +12,8 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
-import ShowPet from './components/pets/ShowPet'
-import CreatePet from './components/pets/CreatePet'
+import ShowSayan from './components/sayans/ShowSayan'
+import CreateSayan from './components/sayans/CreateSayan'
 
 const App = () => {
 
@@ -71,14 +71,14 @@ const App = () => {
 					</RequireAuth>}
 				/>
 				<Route
-					path="/pets/:id"
-					element={ <ShowPet msgAlert={ msgAlert } />}
+					path="/sayans/:id"
+					element={ <ShowSayan msgAlert={ msgAlert } />}
 				/>
 				<Route
-					path="/addPet"
+					path="/addSayan"
 					element={
 						<RequireAuth user={ user }>
-							<CreatePet />
+							<CreateSayan />
 						</RequireAuth>  
 					}
 				/>

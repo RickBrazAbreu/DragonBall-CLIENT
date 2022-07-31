@@ -16,15 +16,15 @@ import {
 } from 'react-bootstrap'
 
 import LoadingScreen from '../shared/LoadingScreen'
-import { getOnePet } from '../../api/pets'
+import { getOneSayan} from '../../api/sayans'
 import messages from '../shared/AutoDismissAlert/messages'
 
-// We need to get the pet's id from the parameters
+// We need to get the sayan's id from the parameters
 // Then we need to make a request to the api
 // Then we need to display the results in this component
 
-const ShowPet = (props) => {
-    const [pet, setPet] = useState(null)
+const ShowSayan = (props) => {
+    const [sayan, setSayan] = useState(null)
 
     const { id } = useParams()
     const navigate = useNavigate()
@@ -35,12 +35,12 @@ const ShowPet = (props) => {
     // destructuring to get the id value from our route parameters
 
     useEffect(() => {
-        getOnePet(id)
-            .then(res => setPet(res.data.pet))
+        getOneSayan(id)
+            .then(res => setSayan(res.data.sayan))
             .catch(err => {                   
                 msgAlert({
-                    heading: 'Error getting pet',
-                    message: messages.getPetsFailure,
+                    heading: 'Error getting sayan',
+                    message: messages.getSayansFailure,
                     variant: 'danger'
                 })
                 navigate('/')
@@ -48,20 +48,20 @@ const ShowPet = (props) => {
             })
     }, [])
 
-    if (!pet) {
+    if (!sayan) {
         return <LoadingScreen />
     }
 
     return (
         <Container className="fluid">
             <Card>
-                <Card.Header>{ pet.fullTitle }</Card.Header>
+                <Card.Header>{ sayan.fullTitle }</Card.Header>
                 <Card.Body>
                     <Card.Text>
-                        <div><small>Age: { pet.age }</small></div>
-                        <div><small>Type: { pet.type }</small></div>
+                        <div><small>Age: { sayan.age }</small></div>
+                        <div><small>Type: { sayan.type }</small></div>
                         <div><small>
-                            Adoptable: { pet.adoptable ? 'yes' : 'no'}
+                            Strong: { sayan.strong ? 'yes' : 'no'}
                         </small></div>
                     </Card.Text>
                 </Card.Body>
@@ -70,4 +70,4 @@ const ShowPet = (props) => {
     )
 }
 
-export default ShowPet
+export default ShowSayan

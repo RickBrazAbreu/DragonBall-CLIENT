@@ -6,11 +6,11 @@ import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
 
 import LoadingScreen from '../shared/LoadingScreen'
-import { getAllPets } from '../../api/pets'
+import { getAllSayans } from '../../api/sayans'
 import messages from '../shared/AutoDismissAlert/messages'
 
-// PetsIndex should make a request to the api
-// To get all pets
+// SayansIndex should make a request to the api
+// To get all sayans
 // Then display them when it gets them
 
 // style for our card container
@@ -20,22 +20,22 @@ const cardContainerStyle = {
     justifyContent: 'center'
 }
 
-const PetsIndex = (props) => {
-    const [pets, setPets] = useState(null)
+const SayansIndex = (props) => {
+    const [sayans, setSayans] = useState(null)
     const [error, setError] = useState(false)
 
     const { msgAlert } = props
 
-    console.log('Props in PetsIndex', props)
+    console.log('Props in SayansIndex', props)
 
     useEffect(() => {
         console.log(props)
-        getAllPets()
-            .then(res => setPets(res.data.pets))
+        getAllSayans()
+            .then(res => setSayans(res.data.sayans))
             .catch(err => {
                 msgAlert({
-                    heading: 'Error Getting Pets',
-                    message: messages.getPetsFailure,
+                    heading: 'Error Getting Sayans',
+                    message: messages.getSayansFailure,
                     variant: 'danger',
                 })
                 setError(true)
@@ -46,19 +46,19 @@ const PetsIndex = (props) => {
         return <p>Error!</p>
     }
 
-    // If pets haven't been loaded yet, show a loading message
-    if (!pets) {
+    // If sayans haven't been loaded yet, show a loading message
+    if (!sayans) {
         return <LoadingScreen />
-    } else if (pets.length === 0) {
-        return <p>No pets yet. Better add some.</p>
+    } else if (sayans.length === 0) {
+        return <p>No sayans yet. Better add some.</p>
     }
 
-    const petCards = pets.map(pet => (
-        <Card style={{ width: '30%', margin: 5}} key={ pet.id }>
-            <Card.Header>{ pet.fullTitle }</Card.Header>
+    const sayanCards = sayans.map(sayan => (
+        <Card style={{ width: '30%', margin: 5}} key={ sayan.id }>
+            <Card.Header>{ sayan.fullTitle }</Card.Header>
             <Card.Body>
                 <Card.Text>
-                    <Link to={`/pets/${pet.id}`}>View { pet.name }</Link>
+                    <Link to={`/sayans/${sayan.id}`}>View { sayan.name }</Link>
                 </Card.Text>
             </Card.Body>
         </Card>
@@ -66,9 +66,9 @@ const PetsIndex = (props) => {
 
     return (
         <div style={ cardContainerStyle }>
-            { petCards }
+            { sayanCards }
         </div>
     )
 }
 
-export default PetsIndex
+export default SayansIndex

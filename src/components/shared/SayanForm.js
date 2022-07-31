@@ -3,40 +3,40 @@ import {
     Button, 
 } from 'react-bootstrap'
 
-const PetForm = (props) => {
-    const { pet, handleChange } = props
+const SayanForm = (props) => {
+    const { sayan, handleChange } = props
 
     return (
         <Form>
             <Form.Label htmlFor="name">Name</Form.Label>
             <Form.Control
-                placeholder="What is your pet's name?"
+                placeholder="What is your sayan's name?"
                 name="name"
                 id="name"
-                value={ pet.name }
+                value={ sayan.name }
                 onChange={ handleChange }
             />
             <Form.Label htmlFor="type">Type</Form.Label>
             <Form.Control
-                placeholder="What kind of pet is this?"
+                placeholder="What kind of sayan is this?"
                 name="type"
                 id="type"
-                value={ pet.type }
+                value={ sayan.type }
                 onChange={ handleChange }
             />
             <Form.Label htmlFor="age">Age</Form.Label>
             <Form.Control
-                placeholder="How old is your pet?"
+                placeholder="How old is your sayan?"
                 type="number"
                 name="age"
                 id="age"
-                value={ pet.age }
+                value={ sayan.age }
                 onChange={ handleChange }
             />
             <Form.Check
-                label="Is this pet adoptable?"
+                label="Is this sayan adoptable?"
                 name="adoptable"
-                defaultChecked={ pet.adoptable  }
+                defaultChecked={ sayan.strong  }
                 onChange={ handleChange }
             />
             <Button type="submit">Submit</Button>
@@ -44,4 +44,4 @@ const PetForm = (props) => {
     )
 }
 
-export default PetForm
+export default SayanForm

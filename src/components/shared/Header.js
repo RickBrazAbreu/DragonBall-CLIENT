@@ -9,8 +9,8 @@ const linkStyle = {
 const authenticatedOptions = (
 	<>
 		<Nav.Link>
-			<Link to="/addPet" style={ linkStyle }>
-				Add a Pet
+			<Link to="/addSayan" style={ linkStyle }>
+				Add a Sayan
 			</Link>
 		</Nav.Link>
 		<Nav.Link>
@@ -52,7 +52,7 @@ const Header = ({ user }) => (
 	<Navbar bg='primary' variant='dark' expand='md'>
 		<Navbar.Brand>
             <Link to='/' style={linkStyle}>
-                Pets
+			Sayans
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />

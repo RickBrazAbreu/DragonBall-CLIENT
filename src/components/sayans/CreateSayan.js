@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import PetForm from '../shared/PetForm'
+import SayanForm from '../shared/SayanForm'
 
-const CreatePet = (props) => {
-    const [pet, setPet] = useState({
+const CreateSayan = (props) => {
+    const [sayan, setSayan] = useState({
         name: '',
         type: '',
         age: '',
@@ -11,20 +11,20 @@ const CreatePet = (props) => {
     })
 
     const handleChange = (e) => {
-        setPet(prevPet => {
+        setSayan(prevSayan => {
             const updatedValue = e.target.value
             const updatedName = e.target.name
-            const updatedPet = {
+            const updatedSayan = {
                 [updatedName]: updatedValue
             }
             return {
-                ...prevPet,
-                ...updatedPet
+                ...prevSayan,
+                ...updatedSayan
             }
         })
     }
 
-    return <PetForm pet={ pet } handleChange={ handleChange } />
+    return <SayanForm sayan={ sayan } handleChange={ handleChange } />
 }
 
-export default CreatePet
+export default CreateSayan

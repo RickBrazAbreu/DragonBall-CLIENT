@@ -1,4 +1,4 @@
-import PetsIndex from './pets/PetsIndex'
+import SayansIndex from './sayans/SayansIndex'
 
 const Home = (props) => {
 	// const { msgAlert, user } = props
@@ -8,8 +8,8 @@ const Home = (props) => {
 
 	return (
 		<>
-			<h2>See the Pets</h2>
-			<PetsIndex msgAlert={ msgAlert } />
+			<h2>See List of Super Sayans</h2>
+			<SayansIndex msgAlert={ msgAlert } />
 		</>
 	)
 }
