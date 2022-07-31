@@ -39,11 +39,6 @@
 Sayan show page wil have a modal for updating.
 Users will be able to delete viw the show page.
 
-### Toys Views
-
-| Route | Description |
-| ----- | ----------- |
-| /addToy | new toy page |
 
 
 ### Wireframes 
