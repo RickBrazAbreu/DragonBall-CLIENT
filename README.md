@@ -1,6 +1,6 @@
-# PETS APP CLIENT
+# SAYAN CLIENTE SIDE
 
- This is a client for our pets app. It It will user to see, and create new pets m, as well as edit them and the toys 
+ This is a client for our Dragon BAll SUper Sayan app. The user will be able to see the list of super Sayan or any other character fr om DBZ .. Also Cliente can create new Character!
 
 
 ## User Stories
@@ -10,14 +10,13 @@
 * As a user, i want tot sign in
 *  As a user I want to sign out
 *  As a user I want to change password
-*  As a user I wnt to see al the pets
-*  I want see informations about specific pet
-*  I want be able tocreate new pet
-*  I want tobe able to delete my pets
+*  As a user I wnt to see al the Sayan
+*  I want see informations about specific sayan
+*  I want be able tocreate new sayan
+*  I want tobe able to delete my Sayan
 *  I want to be able to create a toy
-*  I want tobe able to give a toy to any pet
-*  I want to be able to update my pets toys
-*  I want ot be able  to delete my pets toys
+*  I want tobe able to give a toy to any sayan
+
 
 ## views
 
@@ -28,16 +27,16 @@
 |/ sign-out | allows users to signout of their account |
 | /change-password | allos users to change their password |
 
-### Pet Views
+### Sayan Views
 
 | Route | Description |
 | ----- | ----------- |
-| /     |  pets index |
-|/pets/:id | pet show page |
-| /addPet | new pet page |
+| /     |  sayans index |
+|/sayans/:id | sayan show page |
+| /addSayan | new sayan page |
 
 
-Pet show page wil have a modal for updating.
+Sayan show page wil have a modal for updating.
 Users will be able to delete viw the show page.
 
 ### Toys Views

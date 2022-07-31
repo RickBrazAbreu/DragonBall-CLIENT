@@ -1,4 +1,6 @@
 body {
+  /* background-image: url('file:///Users/pedroabreu/Desktop/seiChallenges/deliverables/hwBuildAPI/DragonBall-CLIENT/src/img/logolist.jpeg'); */
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +12,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.seelistcards{
+  width: 100%;
+  height: 1080px;
+}
+h2{
+  color: aliceblue;
+}
+.seelist{
+  position: relative;
+ 
+  text-align: center;
+}
+.imghome{
+  background-image: url('file:///Users/pedroabreu/Desktop/seiChallenges/deliverables/hwBuildAPI/DragonBall-CLIENT/src/img/logolist.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 90% ;
+ 
+  outline: 1px solid black;
+  
+  
+  text-align: center;
+  /* display: inline-block; */
+  
+
+ 
 }

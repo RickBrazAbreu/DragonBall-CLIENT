@@ -7,10 +7,17 @@ const Home = (props) => {
 	const { msgAlert } = props
 
 	return (
-		<>
-			<h2>See List of Super Sayans</h2>
+		<div className='seelistcards imghome'>
+			<div>
+			{/* <img className='imghome'></img> */}
+			<h2 >See List of Super Sayans</h2>
 			<SayansIndex msgAlert={ msgAlert } />
-		</>
+
+			</div>
+		</div>
+			
+			
+		
 	)
 }
 
